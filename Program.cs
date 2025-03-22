@@ -327,28 +327,58 @@
 //            int minElement = numbers[0];
 //            int maxElement = numbers[numbers.Length - 1];
 //            var count = 1;
-//            var list = new List<int>();
 
-//            for(int i = 0; i < numbers.Length; i++)
+
+//            HashSet<int> numberSet = new HashSet<int>(numbers);
+//            var missingNumbers = new List<int>();
+//            for(int i = minElement; i <= maxElement; i++)
 //            {
-//                while(count <= maxElement)
+//                if (!numberSet.Contains(i))
 //                {
-//                    if(count != numbers[i])
-//                    {
-//                        list.Add(i);
-//                        count++;
-//                    }
-//                    else
-//                    {
-//                        count++;
-//                        continue;
-
-//                    }
+//                    missingNumbers.Add(i);
 //                }
 //            }
+//            foreach(int i in missingNumbers)
+//            {
+//                Console.WriteLine(i);
+//            }
 
-            
 //        }
-        
+
 //    }
 //}
+
+//6.WAP to find the given string is Palindrome or not.
+using System;
+namespace logicals
+{
+    class Program
+    {
+        public static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the string to check Palindrome or Not : ");
+            var str = Console.ReadLine();
+            int left = 0;
+            int right = str.Length - 1;
+            bool isPalindrome = true;
+            while (left < right)
+            {
+                if (str[left] != str[right])
+                {
+                    isPalindrome = false;
+                    break;
+                }
+                left++;
+                right--;
+            }
+            if (isPalindrome)
+            {
+                Console.WriteLine("Palindrome");
+            }
+            else
+            {
+                Console.WriteLine("Not Palindrome");
+            }
+        }
+    }
+}
