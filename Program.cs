@@ -349,36 +349,125 @@
 //}
 
 //6.WAP to find the given string is Palindrome or not.
-using System;
-namespace logicals
-{
-    class Program
-    {
-        public static void Main(string[] args)
-        {
-            Console.WriteLine("Enter the string to check Palindrome or Not : ");
-            var str = Console.ReadLine();
-            int left = 0;
-            int right = str.Length - 1;
-            bool isPalindrome = true;
-            while (left < right)
-            {
-                if (str[left] != str[right])
-                {
-                    isPalindrome = false;
-                    break;
-                }
-                left++;
-                right--;
-            }
-            if (isPalindrome)
-            {
-                Console.WriteLine("Palindrome");
-            }
-            else
-            {
-                Console.WriteLine("Not Palindrome");
-            }
-        }
-    }
-}
+//using System;
+//namespace logicals
+//{
+//    class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            Console.WriteLine("Enter the string to check Palindrome or Not : ");
+//            var str = Console.ReadLine();
+//            int left = 0;
+//            int right = str.Length - 1;
+//            bool isPalindrome = true;
+//            while (left < right)
+//            {
+//                if (str[left] != str[right])
+//                {
+//                    isPalindrome = false;
+//                    break;
+//                }
+//                left++;
+//                right--;
+//            }
+//            if (isPalindrome)
+//            {
+//                Console.WriteLine("Palindrome");
+//            }
+//            else
+//            {
+//                Console.WriteLine("Not Palindrome");
+//            }
+//        }
+//    }
+//}
+
+//7. WAP to print Fibonacci series with recursion.
+//using System;
+//namespace logicals
+//{
+//    class program
+//    {
+//        static void Main(string[] args)
+//        {
+//            Console.WriteLine("Enter the number to get the Fibonacci Series : ");
+//            int n = Convert.ToInt32(Console.ReadLine());
+
+//            Console.WriteLine("Fibonacci Series : ");
+//            for(int i = 0; i < n; i++)
+//            {
+//                Console.WriteLine(fibonacci(i) + " ");
+//            }
+//        }
+
+//        static int fibonacci(int n)
+//        {
+//            if (n <= 0) return 0;
+//            if (n == 1) return 1;
+
+//            return fibonacci(n - 1) + fibonacci(n - 2);
+
+//        }
+//    }
+//}
+
+
+//8. WAP to print Fibonacci series without recursion.
+//using System;
+//namespace logicals
+//{
+//    class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            Console.WriteLine("Enter the number to get fibobacci series withou recursion : ");
+//            int n = Convert.ToInt32(Console.ReadLine());
+
+//            Console.WriteLine("Fibonacci Series without recursion : ");
+//            Program.Fibo(n);
+//        }
+//        public static void Fibo(int n)
+//        {
+//            if(n <= 0)
+//            {
+//                Console.WriteLine("Enter a valid input!!!");
+//                return;
+
+//            }
+//            int a = 0;
+//            int b = 1;
+//            int c;
+
+//            for(int i = 0; i < n; i++)
+//            {
+//                Console.WriteLine(a + " ");
+//                c = a + b;
+//                a = b;
+//                b = c;
+//            }
+
+//        }
+//    }
+//}
+
+//10. Code to find even numbers in a list
+//using System;
+//namespace logicals
+//{
+//    class Program
+//    {
+//        public static void Main(string[] args)
+//        {
+//            var list = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+//            for(int i = 0; i < list.Count; i++)
+//            {
+//                if (list[i] % 2 == 0)
+//                {
+//                    Console.WriteLine(list[i]);
+//                }
+//            }
+//        }
+//    }
+//}
